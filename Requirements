@@ -1,0 +1,21 @@
+
+---
+
+## 🔧 Requirements
+- Cisco DX 650 (SIP-enabled firmware)
+- Asterisk 16+ (PJSIP recommended)
+- TFTP server (dnsmasq / tftpd-hpa)
+- SIP extension configured on Asterisk
+
+---
+
+## 📁 Files
+- `provisioning/` → Cisco XML files
+- `asterisk/` → Sample PJSIP configuration
+- `firmware-info/` → Tested firmware versions
+
+---
+
+## ⚠️ Disclaimer
+This project is provided for educational and lab purposes only.
+Use at your own risk.
