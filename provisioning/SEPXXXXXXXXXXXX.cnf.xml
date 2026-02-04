@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<device>
+  <deviceProtocol>SIP</deviceProtocol>
+
+  <devicePool>
+    <dateTimeSetting>
+      <dateTemplate>D/M/Ya</dateTemplate>
+      <timeZone>Asia/Dubai</timeZone>
+    </dateTimeSetting>
+
+    <callManagerGroup>
+      <members>
+        <member priority="0">
+          <callManager>
+            <processNodeName>ASTERISK</processNodeName>
+            <ports>
+              <sipPort>5060</sipPort>
+            </ports>
+          </callManager>
+        </member>
+      </members>
+    </callManagerGroup>
+  </devicePool>
+
+  <sipProfile>
+    <sipProxies>
+      <backupProxy>ASTERISK_IP</backupProxy>
+      <backupProxyPort>5060</backupProxyPort>
+      <outboundProxy>ASTERISK_IP</outboundProxy>
+      <outboundProxyPort>5060</outboundProxyPort>
+      <registerWithProxy>true</registerWithProxy>
+    </sipProxies>
+
+    <sipLines>
+      <line button="1">
+        <name>EXTENSION</name>
+        <displayName>DX650</displayName>
+        <authName>EXTENSION</authName>
+        <authPassword>PASSWORD</authPassword>
+        <proxy>ASTERISK_IP</proxy>
+      </line>
+    </sipLines>
+
+    <preferredCodec>g711ulaw</preferredCodec>
+    <dtmfOutofBand>rfc2833</dtmfOutofBand>
+  </sipProfile>
+</device>
